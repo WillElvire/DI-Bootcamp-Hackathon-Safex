@@ -1,0 +1,27 @@
+.reporting{
+  .card{
+
+    width: 255px;
+    margin-left: 3%;
+    height: 20vh;
+    .card-body{
+      text-align: center;
+      margin-top: 10%;
+      .box-topic {
+        font-size: 16px;
+      }
+      .number{
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(21, 14, 14);
+      color :white;
+      cursor: pointer;
+    }
+
+  }
+
+}

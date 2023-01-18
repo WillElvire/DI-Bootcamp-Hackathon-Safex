@@ -1,0 +1,38 @@
+<img src="/assets/loading.gif" class="loader" *ngIf="!isLoad">
+<table class="table table-striped mt-4" *ngIf="isLoad">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th scope="col">Numero de cheque</th>
+      <th scope="col">Envoyeur</th>
+      <th scope="col">Beneficiaire</th>
+
+      <th scope="col">Status du cheque</th>
+      <th scope="col">Montant</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cheque of cheques">
+      <th scope="row">{{cheque.id}}</th>
+      <td><b>{{cheque.emetteur | uppercase}}</b></td>
+      <td><b>{{cheque.beneficiary | uppercase}}</b></td>
+      <td>
+         <span *ngIf="cheque.status == 'pending'" style="color:gray">En cours de traitement</span>
+         <span *ngIf="cheque.status == 'done'" style="color:forestgreen"> Traité avec sucess</span>
+         <span *ngIf="cheque.status == 'fail'" style="color:red"> Transaction echoué</span>
+      </td>
+      <td>
+        {{cheque.amount | currency : 'XOF'}}
+      </td>
+      <td>
+        {{cheque.date | date : "EEEE MMM YYYY : HH:MM"}}
+      </td>
+      <td>
+        <a class="btn btn-dark">
+          voir +
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
