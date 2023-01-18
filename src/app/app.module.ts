@@ -9,10 +9,15 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { SharedModule } from './modules/shared.module';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardLayoutComponent,
+
+
+
 
   ],
   imports: [

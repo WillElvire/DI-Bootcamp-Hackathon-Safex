@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row chequiers">
+    <div class="card col-md-3 ml-5 text-center">
+      <div class="card-body">
+        <h3>{{chequier.titre | uppercase}}</h3>
+        <h6>Chequier : {{chequier.id}} </h6>
+        <p>cheque restant : {{chequier.nbFeuille}} feuille(s)</p>
+        <p>Type de cheque : {{chequier.tpCheque}}</p>
+        <p>Date de creation : {{chequier.date | date}}</p>
+        <a class="btn btn-dark"> voir le chequier</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,12 +9,19 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent  {
+export class HomeComponent implements OnInit {
 
   cheques : chequeTransaction[] = getChequesPreloaded();
+  isLoad : boolean = false;
 
   constructor(private router : Router){
 
+  }
+
+  ngOnInit(): void {
+    setTimeout(()=>{
+      this.isLoad = true;
+    },1000)
   }
   gotoHistory(){
     this.router.navigate(["/dashboard/history"]);

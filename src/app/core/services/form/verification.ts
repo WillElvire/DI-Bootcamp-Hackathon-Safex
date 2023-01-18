@@ -13,14 +13,18 @@ export class  VerificationService {
     return !!field;
   }
 
-  verifyObj(obj : {}) {
-    let count = 0;
-    Object.values(obj).forEach((value)=>{
+  verifyObj(obj : {},logType : string = "error") {
+    let response;
+    let count= 0;
+    let index : number[] = [];
+
+    Object.values(obj).forEach((value,i)=>{
       if(!value) {
+        index.push(i)
         count ++;
       }
     })
-    return count;
+    return  logType == "error" ? {count , index } : {count};
   }
 
 }

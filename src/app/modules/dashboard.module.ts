@@ -9,13 +9,17 @@ import { HistoryComponent } from '../views/dashboard/history/history.component';
 import { SharedModule } from './shared.module';
 import { ReportingComponent } from '../views/dashboard/reporting/reporting.component';
 import { ServicesModule } from './services.module';
+import { ListChequierComponent } from '../views/dashboard/list-chequier/list-chequier.component';
+import { SettingsComponent } from '../views/dashboard/settings/settings.component';
+import { ColorPickerModule } from 'ngx-color-picker';
+
 
 
 
 @NgModule({
-  declarations : [HomeComponent , ConfirmChequeComponent , DemandeChequeComponent, HistoryComponent, ReportingComponent],
+  declarations : [HomeComponent , ConfirmChequeComponent , DemandeChequeComponent, HistoryComponent, ReportingComponent,ListChequierComponent, SettingsComponent],
   providers : [ServicesModule],
-  imports : [CommonModule, FormsModule , DashboardRoutingModule , SharedModule],
+  imports : [CommonModule, FormsModule , DashboardRoutingModule , SharedModule,ColorPickerModule],
   exports : [HomeComponent , ConfirmChequeComponent , DemandeChequeComponent],
   bootstrap :[]
 })

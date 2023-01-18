@@ -1,4 +1,13 @@
 <img src="/assets/loading.gif" class="loader" *ngIf="!isLoad">
+<div style="width: 20%;" class="mt-2" *ngIf="isLoad && activate">
+  <label> filtrer par status de transaction</label>
+  <select class="form-control w-20" (change)="setFilterType($event)">
+    <option></option>
+    <option value="pending">en cours</option>
+    <option value="done">transaction validé</option>
+    <option value="fail">transaction echoué</option>
+  </select>
+</div>
 <table class="table table-striped mt-4" *ngIf="isLoad">
   <thead class="bg-dark text-light">
     <tr>
@@ -13,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let cheque of cheques">
+    <tr *ngFor="let cheque of cheques | chequeFilter : filter      ">
       <th scope="row">{{cheque.id}}</th>
       <td><b>{{cheque.emetteur | uppercase}}</b></td>
       <td><b>{{cheque.beneficiary | uppercase}}</b></td>

@@ -7,6 +7,8 @@ import { ListChequeComponent } from '../views/dashboard/list-cheque/list-cheque.
 import { HistoryComponent } from '../views/dashboard/history/history.component';
 import { DemandeChequeComponent } from '../views/dashboard/demande-cheque/demande-cheque.component';
 import { ReportingComponent } from '../views/dashboard/reporting/reporting.component';
+import { ListChequierComponent } from '../views/dashboard/list-chequier/list-chequier.component';
+import { SettingsComponent } from '../views/dashboard/settings/settings.component';
 
 const routes : Route[] = [
   {
@@ -28,6 +30,14 @@ const routes : Route[] = [
       {
         path : 'confirm-cheque',
         component : ConfirmChequeComponent
+      },
+      {
+        path : 'list-chequier',
+        component : ListChequierComponent
+      },
+      {
+        path : 'settings',
+        component : SettingsComponent
       },
       {
         path :'cheque-list',

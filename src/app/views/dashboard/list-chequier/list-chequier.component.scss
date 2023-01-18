@@ -1,0 +1,16 @@
+.chequiers{
+  margin-left: 2%;
+  .card{
+    &:hover{
+      background-color: rgb(50, 46, 46);
+      cursor: pointer;
+      color : white;
+    }
+    a {
+      &:hover{
+        background-color: white !important;
+        color: black;
+      }
+    }
+  }
+}

@@ -1,33 +1,42 @@
 <div class=" reporting row container justify-content-center">
   <div class="card col-md-3">
     <div class="card-body">
-      <div class="box-topic">Total chequiers</div>
-      <div class="number">1</div>
-
+      <img src="/assets/loading.gif" class="loader" width="80" height="50" *ngIf="!isLoad">
+      <div *ngIf="isLoad">
+        <div class="box-topic">Total chequiers</div>
+        <div class="number">1</div>
+      </div>
     </div>
     <i class='bx bx-bank'></i>
   </div>
   <div class="card col-md-3">
     <div class="card-body">
-      <div class="box-topic">Total cheques</div>
-      <div class="number">15</div>
-
+      <img src="/assets/loading.gif" class="loader" width="80" height="50" *ngIf="!isLoad">
+      <div *ngIf="isLoad">
+        <div class="box-topic">Total cheques</div>
+        <div class="number">8</div>
+      </div>
     </div>
     <i class='bx bx-bank'></i>
   </div>
   <div class="card col-md-3">
     <div class="card-body">
-      <div class="box-topic">Total cheques en cours</div>
-      <div class="number">0</div>
 
+      <img src="/assets/loading.gif" class="loader" width="80" height="50" *ngIf="!isLoad">
+      <div *ngIf="isLoad">
+        <div class="box-topic">Total cheques en cours</div>
+        <div class="number">1</div>
+      </div>
     </div>
     <i class='bx bx-bank'></i>
   </div>
   <div class="card col-md-3">
     <div class="card-body">
-      <div class="box-topic">Total cheques recu</div>
-      <div class="number">10</div>
-
+      <img src="/assets/loading.gif" class="loader" width="80" height="50" *ngIf="!isLoad">
+      <div *ngIf="isLoad">
+        <div class="box-topic">Total cheques recu</div>
+        <div class="number">7</div>
+      </div>
     </div>
     <i class='bx bx-bank'></i>
   </div>
